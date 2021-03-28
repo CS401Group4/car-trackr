@@ -7,6 +7,8 @@ import android.util.Log;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.smartcar.sdk.SmartcarAuth;
 import com.smartcar.sdk.SmartcarCallback;
@@ -32,11 +34,23 @@ public class AddCarPage extends AppCompatActivity {
     private static String[] SCOPE;
     private SmartcarAuth smartcarAuth;
     ArrayList<Vehicle> vehicles;
+    RecyclerView mRecyclerView;
+    RecyclerView.LayoutManager mLayoutManager;
+    RecyclerView.Adapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_car_page);
+
+        vehicles = new ArrayList<>();
+
+        mRecyclerView = findViewById(R.id.car_list);
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(this);
+        mAdapter = new MainAdapter(vehicles);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setAdapter(mAdapter);
 
         // Initialize smartcar object
         appContext = getApplicationContext();
@@ -83,7 +97,6 @@ public class AddCarPage extends AppCompatActivity {
 
                                 try {
                                     Response response = client.newCall(infoRequest).execute();
-                                    vehicles = new ArrayList<>();
                                     String jsonBody = response.body().string();
                                     JSONObject JObject = new JSONObject(jsonBody);
                                     JSONArray getArray = JObject.getJSONArray("vehicleArray");
@@ -99,10 +112,13 @@ public class AddCarPage extends AppCompatActivity {
                                         Vehicle vehicle = new Vehicle(id, make, model, Integer.parseInt(year));
                                         vehicles.add(vehicle);
                                     }
-                                    Log.i("AddCarPage", vehicles.toString());
-                                    Intent intent = new Intent(appContext, AddCarPage.class);
-//                                    intent.putExtra("INFO", make + " " + model + " " + year);
-                                    startActivity(intent);
+
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            mAdapter.notifyDataSetChanged();
+                                        }
+                                    });
                                 } catch (IOException e) {
                                     e.printStackTrace();
                                 } catch (JSONException e) {
@@ -111,6 +127,7 @@ public class AddCarPage extends AppCompatActivity {
                             }
                         }).start();
                     }
+
                 }
         );
 
