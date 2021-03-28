@@ -12,10 +12,12 @@ import com.smartcar.sdk.SmartcarAuth;
 import com.smartcar.sdk.SmartcarCallback;
 import com.smartcar.sdk.SmartcarResponse;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -29,6 +31,7 @@ public class AddCarPage extends AppCompatActivity {
     private static String REDIRECT_URI;
     private static String[] SCOPE;
     private SmartcarAuth smartcarAuth;
+    ArrayList<Vehicle> vehicles;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,16 +83,25 @@ public class AddCarPage extends AppCompatActivity {
 
                                 try {
                                     Response response = client.newCall(infoRequest).execute();
-
+                                    vehicles = new ArrayList<>();
                                     String jsonBody = response.body().string();
                                     JSONObject JObject = new JSONObject(jsonBody);
+                                    JSONArray getArray = JObject.getJSONArray("vehicleArray");
 
-                                    String make = JObject.getString("make");
-                                    String model = JObject.getString("model");
-                                    String year = JObject.getString("year");
+                                    for (int i = 0; i < getArray.length(); i++) {
+                                        JSONObject object = getArray.getJSONObject(i);
+                                        JSONObject values = object.getJSONObject("fulfillmentValue");
 
+                                        String id = values.getString("id");
+                                        String make = values.getString("make");
+                                        String model = values.getString("model");
+                                        String year = values.getString("year");
+                                        Vehicle vehicle = new Vehicle(id, make, model, Integer.parseInt(year));
+                                        vehicles.add(vehicle);
+                                    }
+                                    Log.i("AddCarPage", vehicles.toString());
                                     Intent intent = new Intent(appContext, AddCarPage.class);
-                                    intent.putExtra("INFO", make + " " + model + " " + year);
+//                                    intent.putExtra("INFO", make + " " + model + " " + year);
                                     startActivity(intent);
                                 } catch (IOException e) {
                                     e.printStackTrace();
