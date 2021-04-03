@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "164869706021",
+    "project_id": "cartrackr-fb52c",
+    "storage_bucket": "cartrackr-fb52c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164869706021:android:ba12f77ad778ce6e204acc",
+        "android_client_info": {
+          "package_name": "com.example.cartrackr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164869706021-lmr98auccnk1o6b1l9nc86q30qhrepub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzvIMLIUmF2qLsNZvP7Gvb0czN94guLMY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164869706021-lmr98auccnk1o6b1l9nc86q30qhrepub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

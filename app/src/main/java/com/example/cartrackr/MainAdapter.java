@@ -1,5 +1,6 @@
 package com.example.cartrackr;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,8 +27,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.mFullCarModel.setText(mVehicles.get(position).getYear() + " " + mVehicles.get(position).getMake() + " " + mVehicles.get(position).getModel());
-
+        Vehicle vehicle = mVehicles.get(position);
+        holder.mFullCarModel.setText(vehicle.getYear() + " " + vehicle.getMake() + " " + vehicle.getModel());
     }
 
     @Override
@@ -40,6 +41,13 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             mFullCarModel = itemView.findViewById(R.id.car_name);
+            mFullCarModel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(itemView.getContext(), SingleCarPage.class);
+                    itemView.getContext().startActivity(intent);
+                }
+            });
         }
     }
 }
