@@ -44,7 +44,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
             mFullCarModel.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(itemView.getContext(), SingleCarPage.class);
+                    Intent intent = new Intent(itemView.getContext(), CarDetailPage.class);
                     itemView.getContext().startActivity(intent);
                 }
             });

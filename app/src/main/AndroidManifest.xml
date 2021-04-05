@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CarTrackr">
         <activity android:name=".TaskPage"></activity>
-        <activity android:name=".SingleCarPage" />
+        <activity android:name=".CarDetailPage" />
         <activity android:name="com.smartcar.sdk.SmartcarCodeReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
