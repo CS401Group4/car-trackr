@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -11,9 +14,9 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     // Firebase instance variables
-    private FirebaseAuth mFirebaseAuth;
+    public static FirebaseAuth mFirebaseAuth;
 
-    private GoogleSignInClient mSignInClient;
+    public static GoogleSignInClient mSignInClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +36,30 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.sign_out_menu:
+                signOut();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
     public void launchActivity(View view) {
         Intent intent = new Intent(this, AddCarPage.class);
         startActivity(intent);
     }
 
-    private void signOut() {
+    public void signOut() {
         mFirebaseAuth.signOut();
         mSignInClient.signOut();
         startActivity(new Intent(this, SignInActivity.class));

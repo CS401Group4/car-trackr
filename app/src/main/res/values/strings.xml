@@ -6,4 +6,5 @@
     <string name="app_server">http://10.0.2.2:8000</string>
     <string name="sign_in">Sign In</string>
     <string name="todo">TODO</string>
+    <string name="sign_out">Sign Out</string>
 </resources>
