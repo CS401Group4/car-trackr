@@ -4,4 +4,6 @@
     <string name="client_id">b1061aaf-e4e9-4571-8277-da5a55f1866c</string>
     <string name="smartcar_auth_host">exchange</string>
     <string name="app_server">http://10.0.2.2:8000</string>
+    <string name="sign_in">Sign In</string>
+    <string name="todo">TODO</string>
 </resources>

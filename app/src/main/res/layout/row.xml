@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="92dp"
         android:layout_margin="12dp">
 
         <LinearLayout
@@ -15,16 +16,16 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="118dp"
-                android:layout_height="108dp"
-                android:contentDescription="TODO"
-                app:srcCompat="@drawable/car_icon"
-                tools:ignore="VectorDrawableCompat" />
+                android:id="@+id/imageView"
+                android:layout_width="253dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/car" />
 
             <TextView
                 android:id="@+id/car_name"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:padding="12dp"

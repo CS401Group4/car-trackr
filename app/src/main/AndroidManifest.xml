@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CarTrackr">
-        <activity android:name=".TaskPage"></activity>
+        <activity android:name=".SignInActivity"></activity>
+        <activity android:name=".TaskPage" />
         <activity android:name=".CarDetailPage" />
         <activity android:name="com.smartcar.sdk.SmartcarCodeReceiver">
             <intent-filter>
