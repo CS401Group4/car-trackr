@@ -4,6 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +29,9 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import android.os.Bundle;
+
+import static com.example.cartrackr.MainActivity.mFirebaseAuth;
+import static com.example.cartrackr.MainActivity.mSignInClient;
 
 public class AddCarPage extends AppCompatActivity {
     private Context appContext;
@@ -134,5 +140,30 @@ public class AddCarPage extends AppCompatActivity {
         Button connectButton = findViewById(R.id.add_car_btn);
 
         smartcarAuth.addClickHandler(appContext, connectButton);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.sign_out_menu:
+                signOut();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void signOut() {
+        mFirebaseAuth.signOut();
+        mSignInClient.signOut();
+        startActivity(new Intent(this, SignInActivity.class));
+        finish();
     }
 }
