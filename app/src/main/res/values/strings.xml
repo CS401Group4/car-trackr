@@ -7,4 +7,5 @@
     <string name="sign_in">Sign In</string>
     <string name="todo">TODO</string>
     <string name="sign_out">Sign Out</string>
+    <string name="Register">Button</string>
 </resources>
