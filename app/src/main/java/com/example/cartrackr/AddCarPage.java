@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.firebase.auth.FirebaseAuth;
 import com.smartcar.sdk.SmartcarAuth;
 import com.smartcar.sdk.SmartcarCallback;
 import com.smartcar.sdk.SmartcarResponse;
@@ -30,10 +32,12 @@ import okhttp3.Response;
 
 import android.os.Bundle;
 
-import static com.example.cartrackr.MainActivity.mFirebaseAuth;
-import static com.example.cartrackr.MainActivity.mSignInClient;
 
 public class AddCarPage extends AppCompatActivity {
+    // Firebase instance variables
+    public static FirebaseAuth mFirebaseAuth;
+    public static GoogleSignInClient mSignInClient;
+
     private Context appContext;
     private static String CLIENT_ID;
     private static String REDIRECT_URI;
@@ -47,7 +51,23 @@ public class AddCarPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        try
+        {
+            this.getSupportActionBar().setDisplayUseLogoEnabled(true);
+        }
+        catch (NullPointerException e){}
+
         setContentView(R.layout.activity_add_car_page);
+
+        // Initialize Firebase Auth and check if the user is signed in
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        if (mFirebaseAuth.getCurrentUser() == null) {
+            // Not signed in, launch the Sign In activity
+            startActivity(new Intent(this, SignInActivity.class));
+            finish();
+            return;
+        }
 
         vehicles = new ArrayList<>();
 

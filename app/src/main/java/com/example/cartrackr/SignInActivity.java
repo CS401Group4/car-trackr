@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.cartrackr.databinding.ActivitySignInBinding;
@@ -37,6 +38,12 @@ public class SignInActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
 
         // Initialize FirebaseAuth
         mFirebaseAuth = FirebaseAuth.getInstance();
@@ -91,7 +98,7 @@ public class SignInActivity extends AppCompatActivity {
                         // If sign in succeeds the auth state listener will be notified and logic to
                         // handle the signed in user can be handled in the listener.
                         Log.d(TAG, "signInWithCredential:success");
-                        startActivity(new Intent(SignInActivity.this, MainActivity.class));
+                        startActivity(new Intent(SignInActivity.this, AddCarPage.class));
                         finish();
                     }
                 })
@@ -109,5 +116,15 @@ public class SignInActivity extends AppCompatActivity {
     private void signIn() {
         Intent signInIntent = mSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+
+    public void launchRegistrationActivity(View view) {
+        Intent intent = new Intent(this, RegistrationPage.class);
+        startActivity(intent);
+    }
+
+    public void launchRegisterPage(View view) {
+        Intent intent = new Intent(this, RegistrationPage.class);
+        startActivity(intent);
     }
 }
