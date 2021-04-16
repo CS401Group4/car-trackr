@@ -82,7 +82,7 @@ public class AddCarPage extends AppCompatActivity {
         appContext = getApplicationContext();
         CLIENT_ID = getString(R.string.client_id);
         REDIRECT_URI = getString(R.string.smartcar_auth_scheme) + "://" + getString(R.string.smartcar_auth_host);
-        SCOPE = new String[]{"required:read_vehicle_info"};
+        SCOPE = new String[]{"required:read_vehicle_info", "read_odometer", "read_tires"};
 
         smartcarAuth = new SmartcarAuth(
                 CLIENT_ID,
@@ -130,6 +130,7 @@ public class AddCarPage extends AppCompatActivity {
                                     for (int i = 0; i < getArray.length(); i++) {
                                         JSONObject object = getArray.getJSONObject(i);
                                         JSONObject values = object.getJSONObject("fulfillmentValue");
+                                        System.out.println(values.toString());
 
                                         String id = values.getString("id");
                                         String make = values.getString("make");
