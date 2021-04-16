@@ -1,6 +1,8 @@
 package com.example.cartrackr;
 
-public class Vehicle {
+import java.io.Serializable;
+
+public class Vehicle implements Serializable {
     String id;
     String make;
     String model;

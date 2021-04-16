@@ -1,6 +1,8 @@
 package com.example.cartrackr;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
@@ -28,6 +31,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Vehicle vehicle = mVehicles.get(position);
+        Log.i("HELLO", vehicle.toString());
         holder.mFullCarModel.setText(vehicle.getYear() + " " + vehicle.getMake() + " " + vehicle.getModel());
     }
 
@@ -36,18 +40,21 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         return mVehicles.size();
     }
 
-    public class ViewHolder extends  RecyclerView.ViewHolder {
+    public class ViewHolder extends  RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView mFullCarModel;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
             mFullCarModel = itemView.findViewById(R.id.car_name);
-            mFullCarModel.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(itemView.getContext(), CarDetailPage.class);
-                    itemView.getContext().startActivity(intent);
-                }
-            });
+        }
+
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(itemView.getContext(), CarDetailPage.class);
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("DATA", mVehicles.get(getAdapterPosition()));
+            intent.putExtras(bundle);
+            itemView.getContext().startActivity(intent);
         }
     }
 }

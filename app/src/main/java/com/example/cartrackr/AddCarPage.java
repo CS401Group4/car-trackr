@@ -183,7 +183,7 @@ public class AddCarPage extends AppCompatActivity {
     private void signOut() {
         mFirebaseAuth.signOut();
         mSignInClient.signOut();
-        startActivity(new Intent(this, SignInActivity.class));
+        startActivity(new Intent(this, MainActivity.class));
         finish();
     }
 }
