@@ -11,19 +11,17 @@
         android:id="@+id/car_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="24dp"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toTopOf="@+id/add_car_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/add_car_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
         android:layout_marginStart="159dp"
         android:layout_marginLeft="159dp"
         android:layout_marginEnd="159dp"
@@ -33,9 +31,24 @@
         android:text="Add Car"
         android:textSize="18sp"
         app:backgroundTint="#4CAF50"
-        app:cornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/empty_car_image"
+        android:layout_width="275dp"
+        android:layout_height="245dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/add_car_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.229"
+        app:srcCompat="@drawable/addcar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

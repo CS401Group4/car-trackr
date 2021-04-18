@@ -2,14 +2,20 @@ package com.example.cartrackr;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -33,6 +39,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 
 
 public class AddCarPage extends AppCompatActivity {
@@ -49,18 +56,19 @@ public class AddCarPage extends AppCompatActivity {
     RecyclerView mRecyclerView;
     RecyclerView.LayoutManager mLayoutManager;
     RecyclerView.Adapter mAdapter;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        try
-        {
-            this.getSupportActionBar().setDisplayUseLogoEnabled(true);
-        }
-        catch (NullPointerException e){}
-
         setContentView(R.layout.activity_add_car_page);
+
+        // Setup toolbar
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setIcon(R.drawable.carlogonotext);
+        int color = Color.parseColor("#259504");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(color));
+
 
         // Initialize Firebase Auth and check if the user is signed in
         mFirebaseAuth = FirebaseAuth.getInstance();
@@ -80,12 +88,24 @@ public class AddCarPage extends AppCompatActivity {
 
         vehicles = new ArrayList<>();
 
+        // Setup recycler view
         mRecyclerView = findViewById(R.id.car_list);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
         mAdapter = new MainAdapter(vehicles);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
+
+        // Initiate image view to display when there is no data yet
+        imageView = (ImageView) findViewById(R.id.empty_car_image);
+
+        if (vehicles.isEmpty()) {
+            mRecyclerView.setVisibility(View.GONE);
+            imageView.setVisibility(View.VISIBLE);
+        } else {
+            mRecyclerView.setVisibility(View.VISIBLE);
+            imageView.setVisibility(View.GONE);
+        }
 
         // Initialize smartcar object
         appContext = getApplicationContext();
@@ -152,6 +172,8 @@ public class AddCarPage extends AppCompatActivity {
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
+                                            mRecyclerView.setVisibility(View.VISIBLE);
+                                            imageView.setVisibility(View.GONE);
                                             mAdapter.notifyDataSetChanged();
                                         }
                                     });
