@@ -13,7 +13,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.smartcar.sdk.SmartcarAuth;
 import com.smartcar.sdk.SmartcarCallback;
@@ -68,6 +70,13 @@ public class AddCarPage extends AppCompatActivity {
             finish();
             return;
         }
+
+        // Configure Google Sign In
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+        mSignInClient = GoogleSignIn.getClient(this, gso);
 
         vehicles = new ArrayList<>();
 

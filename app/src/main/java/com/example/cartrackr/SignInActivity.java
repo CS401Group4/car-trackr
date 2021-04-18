@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.cartrackr.databinding.ActivitySignInBinding;
@@ -25,10 +27,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 public class SignInActivity extends AppCompatActivity {
-
     private static final String TAG = "SignInActivity";
     private static final int RC_SIGN_IN = 9001;
 
+    // Variables for Google login
     private ActivitySignInBinding mBinding;
     private GoogleSignInClient mSignInClient;
 
@@ -48,8 +50,7 @@ public class SignInActivity extends AppCompatActivity {
         // Initialize FirebaseAuth
         mFirebaseAuth = FirebaseAuth.getInstance();
 
-        // This codelab uses View Binding
-        // See: https://developer.android.com/topic/libraries/view-binding
+        // Bind the views
         mBinding = ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
 
@@ -61,12 +62,37 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
 
+        mBinding.logInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String textEmail = mBinding.loginEmail.getText().toString();
+                String textPassword = mBinding.loginPassword.getText().toString();
+
+                if (TextUtils.isEmpty(textEmail) || TextUtils.isEmpty(textPassword)) {
+                    Toast.makeText(SignInActivity.this, "Email and Password are required", Toast.LENGTH_SHORT).show();
+                } else {
+                    loginUser(textEmail, textPassword);
+                }
+            }
+        });
+
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
         mSignInClient = GoogleSignIn.getClient(this, gso);
+    }
+
+    private void loginUser(String textEmail, String textPassword) {
+        mFirebaseAuth.signInWithEmailAndPassword(textEmail, textPassword).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+            @Override
+            public void onSuccess(AuthResult authResult) {
+                Intent intent = new Intent(SignInActivity.this, AddCarPage.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     @Override
