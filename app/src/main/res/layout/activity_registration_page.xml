@@ -19,7 +19,7 @@
         app:backgroundTint="#259504"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -37,7 +37,7 @@
         app:srcCompat="@drawable/carlogonotext" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
+        android:id="@+id/email_address"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
@@ -52,10 +52,10 @@
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/full_name" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/full_name"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
@@ -73,7 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/password"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
@@ -88,17 +88,23 @@
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
+        app:layout_constraintTop_toBottomOf="@+id/email_address" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="350dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="64dp"
-        android:background="?android:attr/listDivider"
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button_for_reg"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_button" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
         android:id="@+id/textView7"
@@ -106,10 +112,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"
-        android:layout_marginTop="126dp"
+        android:layout_marginTop="62dp"
         android:text="Already have an account? "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_button_for_reg" />
 
     <TextView
         android:id="@+id/textView8"
@@ -117,7 +123,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
         android:layout_marginLeft="26dp"
-        android:layout_marginTop="126dp"
+        android:layout_marginTop="62dp"
         android:autoLink="web"
         android:cursorVisible="false"
         android:linksClickable="true"
@@ -125,6 +131,20 @@
         android:text="Log in"
         android:textColor="#035FC3"
         app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_button_for_reg" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="-------------------- or --------------------"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
