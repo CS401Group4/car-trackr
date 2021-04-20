@@ -26,7 +26,7 @@
         android:layout_marginLeft="159dp"
         android:layout_marginEnd="159dp"
         android:layout_marginRight="159dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="64dp"
         android:lineSpacingExtra="8sp"
         android:text="Add Car"
         android:textSize="18sp"

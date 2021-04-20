@@ -17,12 +17,7 @@ public class Vehicle implements Serializable {
 
     @Override
     public String toString() {
-        return "Vehicle{" +
-                "id='" + id + '\'' +
-                ", make='" + make + '\'' +
-                ", model='" + model + '\'' +
-                ", year=" + year +
-                '}';
+        return year + ' ' + make + ' ' + model;
     }
 
     public String getId() {
