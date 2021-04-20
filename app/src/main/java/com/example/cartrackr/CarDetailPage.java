@@ -6,11 +6,14 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
@@ -32,6 +35,15 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class CarDetailPage extends AppCompatActivity {
+    private int odometer;
+    private int batteryRange;
+    private double batteryRemaining = 0;
+    private long latitude;
+    private long longitude;
+
+    ProgressBar progressBar;
+    TextView batteryPercentage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,12 +60,17 @@ public class CarDetailPage extends AppCompatActivity {
         Vehicle vehicle = (Vehicle) getIntent().getExtras().getSerializable("DATA");
         Log.i("CAR", vehicle.getId());
 
+        progressBar = findViewById(R.id.progressBar);
+        batteryPercentage = findViewById(R.id.battery_percent);
+        updateProgressBar();
+        Handler handler = new Handler();
+
         new Thread(new Runnable() {
             @Override
             public void run() {
                 Log.i("CAR_DETAIL", vehicle.getId());
                 Request infoRequest = new Request.Builder()
-                        .url(getString(R.string.app_server) + "/odometer?vehicleId=" + vehicle.getId())
+                        .url(getString(R.string.app_server) + "/getVehicleData?vehicleId=" + vehicle.getId())
                         .build();
 
                 try {
@@ -61,13 +78,38 @@ public class CarDetailPage extends AppCompatActivity {
                     String jsonBody = response.body().string();
                     JSONObject JObject = new JSONObject(jsonBody);
                     Log.i("CAR_DETAIL", JObject.toString());
+
+                    JSONObject distance = new JSONObject(JObject.getString("distance"));
+                    odometer = distance.getInt("distance");
+
+                    JSONObject battery = new JSONObject(JObject.getString("batteryLevel"));
+                    batteryRange = battery.getInt("range");
+                    batteryRemaining = battery.getDouble("percentRemaining");
+
+                    JSONObject location = new JSONObject(JObject.getString("location"));
+                    latitude = location.getLong("latitude");
+                    longitude = location.getLong("longitude");
                 } catch (IOException e) {
                     e.printStackTrace();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        updateProgressBar();
+                    }
+                });
             }
         }).start();
+    }
+
+    private void updateProgressBar() {
+        batteryRemaining = batteryRemaining * 100;
+        Log.i("CAR_DETAIL", String.valueOf(batteryRemaining));
+        progressBar.setProgress((int) batteryRemaining);
+        batteryPercentage.setText(String.valueOf(batteryRemaining) + "%");
     }
 
     public void launchTaskPage(View view) {
