@@ -6,6 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="CAR_DETAIL" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="BranchesTreeState">
@@ -28,13 +29,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="310564c0-4e3a-4e12-ae56-65977446b5af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v24/addcar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/cartrackr/AddCarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cartrackr/AddCarPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/cartrackr/CarDetailPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cartrackr/CarDetailPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/cartrackr/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cartrackr/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/cartrackr/TaskPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cartrackr/TaskPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_car_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_car_page.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_car_detail_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_car_detail_page.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,11 +247,12 @@
     </state>
     <state x="328" y="168" key="AndroidCreateResourceDirectoryDialog/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1618376594664" />
     <state x="328" y="168" key="AndroidCreateResourceDirectoryDialog/0.25.1440.817@0.25.1440.817" timestamp="1616968731001" />
-    <state x="328" y="168" key="AndroidCreateResourceFileDialog" timestamp="1618502416762">
-      <screen x="0" y="25" width="1440" height="817" />
+    <state x="328" y="168" key="AndroidCreateResourceFileDialog" timestamp="1618875774206">
+      <screen x="0" y="25" width="1440" height="818" />
     </state>
     <state x="328" y="168" key="AndroidCreateResourceFileDialog/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1618376620043" />
     <state x="328" y="168" key="AndroidCreateResourceFileDialog/0.25.1440.817@0.25.1440.817" timestamp="1618502416762" />
+    <state x="328" y="168" key="AndroidCreateResourceFileDialog/0.25.1440.818@0.25.1440.818" timestamp="1618875774206" />
     <state x="562" y="207" key="AndroidCreateXmlResourceDialog" timestamp="1618463732584">
       <screen x="0" y="25" width="1440" height="817" />
     </state>
@@ -257,30 +262,34 @@
       <screen x="0" y="25" width="1440" height="817" />
     </state>
     <state x="412" y="168" width="656" height="482" key="Downloadable.Font.Dialog.Size/0.25.1440.817@0.25.1440.817" timestamp="1616872621136" />
-    <state width="1396" height="207" key="GridCell.Tab.0.bottom" timestamp="1618761087031">
-      <screen x="0" y="25" width="1440" height="817" />
+    <state width="1396" height="207" key="GridCell.Tab.0.bottom" timestamp="1618879837001">
+      <screen x="0" y="25" width="1440" height="818" />
     </state>
     <state width="1356" height="150" key="GridCell.Tab.0.bottom/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1618377362457" />
     <state width="1396" height="249" key="GridCell.Tab.0.bottom/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618595063774" />
-    <state width="1396" height="207" key="GridCell.Tab.0.bottom/0.25.1440.817@0.25.1440.817" timestamp="1618761087031" />
-    <state width="1396" height="207" key="GridCell.Tab.0.center" timestamp="1618761087031">
-      <screen x="0" y="25" width="1440" height="817" />
+    <state width="1396" height="207" key="GridCell.Tab.0.bottom/0.25.1440.817@0.25.1440.817" timestamp="1618868646335" />
+    <state width="1396" height="207" key="GridCell.Tab.0.bottom/0.25.1440.818@0.25.1440.818" timestamp="1618879837001" />
+    <state width="1396" height="207" key="GridCell.Tab.0.center" timestamp="1618879836999">
+      <screen x="0" y="25" width="1440" height="818" />
     </state>
     <state width="1356" height="150" key="GridCell.Tab.0.center/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1618377362456" />
     <state width="1396" height="249" key="GridCell.Tab.0.center/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618595063773" />
-    <state width="1396" height="207" key="GridCell.Tab.0.center/0.25.1440.817@0.25.1440.817" timestamp="1618761087031" />
-    <state width="1396" height="207" key="GridCell.Tab.0.left" timestamp="1618761087030">
-      <screen x="0" y="25" width="1440" height="817" />
+    <state width="1396" height="207" key="GridCell.Tab.0.center/0.25.1440.817@0.25.1440.817" timestamp="1618868646335" />
+    <state width="1396" height="207" key="GridCell.Tab.0.center/0.25.1440.818@0.25.1440.818" timestamp="1618879836999" />
+    <state width="1396" height="207" key="GridCell.Tab.0.left" timestamp="1618879836996">
+      <screen x="0" y="25" width="1440" height="818" />
     </state>
     <state width="1356" height="150" key="GridCell.Tab.0.left/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1618377362455" />
     <state width="1396" height="249" key="GridCell.Tab.0.left/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618595063773" />
-    <state width="1396" height="207" key="GridCell.Tab.0.left/0.25.1440.817@0.25.1440.817" timestamp="1618761087030" />
-    <state width="1396" height="207" key="GridCell.Tab.0.right" timestamp="1618761087031">
-      <screen x="0" y="25" width="1440" height="817" />
+    <state width="1396" height="207" key="GridCell.Tab.0.left/0.25.1440.817@0.25.1440.817" timestamp="1618868646334" />
+    <state width="1396" height="207" key="GridCell.Tab.0.left/0.25.1440.818@0.25.1440.818" timestamp="1618879836996" />
+    <state width="1396" height="207" key="GridCell.Tab.0.right" timestamp="1618879837000">
+      <screen x="0" y="25" width="1440" height="818" />
     </state>
     <state width="1356" height="150" key="GridCell.Tab.0.right/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1618377362456" />
     <state width="1396" height="249" key="GridCell.Tab.0.right/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1618595063774" />
-    <state width="1396" height="207" key="GridCell.Tab.0.right/0.25.1440.817@0.25.1440.817" timestamp="1618761087031" />
+    <state width="1396" height="207" key="GridCell.Tab.0.right/0.25.1440.817@0.25.1440.817" timestamp="1618868646335" />
+    <state width="1396" height="207" key="GridCell.Tab.0.right/0.25.1440.818@0.25.1440.818" timestamp="1618879837000" />
     <state x="376" y="175" key="MultipleFileMergeDialog" timestamp="1616693474395">
       <screen x="0" y="25" width="1440" height="815" />
     </state>
