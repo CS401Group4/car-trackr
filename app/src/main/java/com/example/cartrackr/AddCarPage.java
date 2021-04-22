@@ -4,8 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -14,15 +12,22 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.cartrackr.adapter.MainAdapter;
+import com.example.cartrackr.model.Vehicle;
+import com.example.cartrackr.util.FirebaseUtil;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.smartcar.sdk.SmartcarAuth;
 import com.smartcar.sdk.SmartcarCallback;
 import com.smartcar.sdk.SmartcarResponse;
@@ -33,12 +38,13 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import android.os.Bundle;
 import android.widget.ImageView;
 
 
@@ -46,6 +52,8 @@ public class AddCarPage extends AppCompatActivity {
     // Firebase instance variables
     public static FirebaseAuth mFirebaseAuth;
     public static GoogleSignInClient mSignInClient;
+
+    private FirebaseFirestore mFirestore;
 
     private Context appContext;
     private static String CLIENT_ID;
@@ -78,6 +86,9 @@ public class AddCarPage extends AppCompatActivity {
             finish();
             return;
         }
+
+        // Initialize Firestore and the main RecyclerView
+        mFirestore = FirebaseUtil.getFirestore();
 
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -150,24 +161,63 @@ public class AddCarPage extends AppCompatActivity {
                                         .url(getString(R.string.app_server) + "/vehicle")
                                         .build();
 
+                                // Get reference to collection
+                                String userId = FirebaseUtil.getAuth().getCurrentUser().getUid();
+
                                 try {
                                     Response response = client.newCall(infoRequest).execute();
                                     String jsonBody = response.body().string();
                                     JSONObject JObject = new JSONObject(jsonBody);
                                     JSONArray getArray = JObject.getJSONArray("vehicleArray");
                                     String token = JObject.getString("refreshToken");
-                                    Log.i("HELLO", token);
+                                    Map<String, Object> refreshToken = new HashMap<>();
+                                    refreshToken.put("refreshToken", token);
+                                    mFirestore.collection("users").document(userId)
+                                            .set(refreshToken)
+                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void aVoid) {
+                                                    Log.d("DOC", "DocumentSnapshot successfully written!");
+                                                }
+                                            })
+                                            .addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    Log.w("DOC", "Error writing document", e);
+                                                }
+                                            });
 
                                     for (int i = 0; i < getArray.length(); i++) {
                                         JSONObject object = getArray.getJSONObject(i);
                                         JSONObject values = object.getJSONObject("fulfillmentValue");
-                                        System.out.println(values.toString());
+                                        Log.i("HELLO", values.toString());
 
                                         String id = values.getString("id");
                                         String make = values.getString("make");
                                         String model = values.getString("model");
                                         String year = values.getString("year");
-                                        Vehicle vehicle = new Vehicle(id, make, model, Integer.parseInt(year));
+                                        Vehicle vehicle = new Vehicle(id, make, model, Integer.parseInt(year), token);
+
+                                        Map<String, Object> vehicleMap = new HashMap<>();
+                                        vehicleMap.put("make", make);
+                                        vehicleMap.put("model", model);
+                                        vehicleMap.put("year", year);
+                                        mFirestore.collection("users").document(userId)
+                                                .collection("vehicles")
+                                                .document(id)
+                                                .set(vehicleMap)
+                                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                    @Override
+                                                    public void onSuccess(Void aVoid) {
+                                                        Log.d("DOC", "DocumentSnapshot successfully written!");
+                                                    }
+                                                })
+                                                .addOnFailureListener(new OnFailureListener() {
+                                                    @Override
+                                                    public void onFailure(@NonNull Exception e) {
+                                                        Log.w("DOC", "Error writing document", e);
+                                                    }
+                                                });
                                         vehicles.add(vehicle);
                                     }
 

@@ -1,4 +1,4 @@
-package com.example.cartrackr;
+package com.example.cartrackr.adapter;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.io.Serializable;
+import com.example.cartrackr.CarDetailPage;
+import com.example.cartrackr.R;
+import com.example.cartrackr.model.Vehicle;
+
 import java.util.ArrayList;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
