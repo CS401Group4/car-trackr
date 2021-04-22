@@ -14,7 +14,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="64dp"
-        android:text="Add New Task"
+        android:text="Schedule a new service"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,9 +34,10 @@
         app:layout_constraintTop_toBottomOf="@+id/task_title">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/service_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Task Name" />
+            android:hint="Service Name" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <EditText
@@ -49,20 +50,28 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:ems="10"
-        android:hint="Enter Date"
+        android:hint="Due Date"
         android:inputType="date"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <Button
         android:id="@+id/save_task_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:text="Save Task"
+        app:backgroundTint="#259504"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/task_due_date" />
 
@@ -73,7 +82,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="64dp"
-        android:text="Tasks"
+        android:text="Scheduled Services"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"

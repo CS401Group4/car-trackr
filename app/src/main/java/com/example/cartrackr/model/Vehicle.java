@@ -1,4 +1,4 @@
-package com.example.cartrackr;
+package com.example.cartrackr.model;
 
 import java.io.Serializable;
 
@@ -7,12 +7,14 @@ public class Vehicle implements Serializable {
     String make;
     String model;
     int year;
+    String refreshToken;
 
-    public Vehicle(String id, String make, String model, int year) {
+    public Vehicle(String id, String make, String model, int year, String token) {
         this.id = id;
         this.make = make;
         this.model = model;
         this.year = year;
+        this.refreshToken = token;
     }
 
     @Override

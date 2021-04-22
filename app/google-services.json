@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "164869706021",
+    "firebase_url": "https://cartrackr-fb52c-default-rtdb.firebaseio.com",
     "project_id": "cartrackr-fb52c",
     "storage_bucket": "cartrackr-fb52c.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "164869706021-hdkv35ka265v2ic9c0lj37bjfsdofiam.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cartrackr",
+            "certificate_hash": "63cabe8bca26e8aa264a3d351003b335f0610723"
+          }
+        },
         {
           "client_id": "164869706021-lmr98auccnk1o6b1l9nc86q30qhrepub.apps.googleusercontent.com",
           "client_type": 3
