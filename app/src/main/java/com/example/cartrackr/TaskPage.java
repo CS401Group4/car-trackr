@@ -41,10 +41,10 @@ public class TaskPage extends AppCompatActivity {
     private FirebaseFirestore mFirestore;
     Query query;
 
-    private TextInputEditText textServiceName;
+    private EditText textServiceName;
     private EditText textServiceDate;
     private Button saveTaskButton;
-    private FirestoreRecyclerAdapter adapter;
+    private FirestoreRecyclerAdapter<Tasks, TasksHolder> adapter;
 
     Vehicle vehicle;
     RecyclerView tasksList;
@@ -76,7 +76,6 @@ public class TaskPage extends AppCompatActivity {
                 serviceDate = textServiceDate.getText().toString();
 
                 saveDateToFirestore();
-                getTasksList();
             }
         });
     }
@@ -108,7 +107,7 @@ public class TaskPage extends AppCompatActivity {
 
     private void getTasksList() {
         String userId = FirebaseUtil.getAuth().getCurrentUser().getUid();
-        query = mFirestore.collection("users").document(userId).collection("vehicles").document(vehicle.getId()).collection("tasks");
+        query = mFirestore.collection("users").document(userId).collection("vehicles").document(vehicle.getId()).collection("tasks").orderBy("serviceName");
         Log.i("QUERY", query.toString());
         FirestoreRecyclerOptions<Tasks> tasks = new FirestoreRecyclerOptions.Builder<Tasks>()
                 .setQuery(query, Tasks.class).build();
@@ -181,6 +180,7 @@ public class TaskPage extends AppCompatActivity {
 
         textServiceDate.setText("");
         textServiceName.setText("");
+        adapter.notifyDataSetChanged();
     }
 
     @Override

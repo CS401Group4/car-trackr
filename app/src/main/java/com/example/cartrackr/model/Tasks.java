@@ -16,7 +16,7 @@ public class Tasks {
 
     @Override
     public String toString() {
-        return serviceName + ' ' + serviceDate;
+        return serviceName + " (Due: " + serviceDate + ")" ;
     }
 
     public String getServiceName() {
