@@ -30,6 +30,11 @@ public class Vehicle implements Serializable {
     String refreshToken;
 
     /**
+     * Default constructor
+     */
+    public Vehicle() {}
+
+    /**
      * Custom constructor
      * @param id string of vehicle id
      * @param make string of vehicle make
