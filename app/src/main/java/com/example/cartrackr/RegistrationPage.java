@@ -27,22 +27,57 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+/**
+ * RegistrationPage Activity to show registration page
+ * @since April 2021
+ * @author Group 4
+ */
 public class RegistrationPage extends AppCompatActivity {
+    /**
+     * String for Log tag
+     */
     private static final String TAG = "SignInActivity";
+    /**
+     * int needed for Google Sign In
+     */
     private static final int RC_SIGN_IN = 9001;
+    /**
+     * Register button
+     */
     private Button register;
+    /**
+     * Full name input
+     */
     private EditText fullName;
+    /**
+     * Email input
+     */
     private EditText email;
+    /**
+     * Email password
+     */
     private EditText password;
+    /**
+     * Instance of FirebaseAuth
+     */
     private FirebaseAuth auth;
+    /**
+     * Sign In button
+     */
     private SignInButton signInButton;
-
-    // Variables for Google login
+    /**
+     * GoogleSignInClient instance
+     */
     private GoogleSignInClient mSignInClient;
-
-    // Firebase instance variables
+    /**
+     * FirebaseAuth instance
+     */
     private FirebaseAuth mFirebaseAuth;
 
+    /**
+     * Override method for onCreate
+     * @param savedInstanceState Bundle instance
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +108,7 @@ public class RegistrationPage extends AppCompatActivity {
             }
         });
 
+        // Click listener for register button
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,6 +131,12 @@ public class RegistrationPage extends AppCompatActivity {
         mSignInClient = GoogleSignIn.getClient(this, gso);
     }
 
+    /**
+     * Override method needed for Google Sign In
+     * @param requestCode int variable
+     * @param resultCode int variable
+     * @param data Intent instance
+     */
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -114,6 +156,10 @@ public class RegistrationPage extends AppCompatActivity {
         }
     }
 
+    /**
+     * Method to run when clicking on Google Sign In
+     * @param acct GoogleSignInAccount instance
+     */
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
         Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
@@ -139,11 +185,19 @@ public class RegistrationPage extends AppCompatActivity {
                 });
     }
 
+    /**
+     * Method to launch Sign In Activity
+     */
     private void signIn() {
         Intent signInIntent = mSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
+    /**
+     * Method to run to register user when register button is clicked
+     * @param textEmail email value
+     * @param textPassword password value
+     */
     private void registerUser(String textEmail, String textPassword) {
         auth.createUserWithEmailAndPassword(textEmail, textPassword).addOnCompleteListener(RegistrationPage.this, new OnCompleteListener<AuthResult>() {
             @Override
@@ -159,6 +213,10 @@ public class RegistrationPage extends AppCompatActivity {
         });
     }
 
+    /**
+     * Method to launch Sign In Activity
+     * @param view View instance
+     */
     public void launchSignInActivity(View view) {
         Intent intent = new Intent(this, SignInActivity.class);
         startActivity(intent);
