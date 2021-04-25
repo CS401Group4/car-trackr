@@ -47,25 +47,70 @@ import okhttp3.Response;
 
 import android.widget.ImageView;
 
-
+/**
+ * AddCarPage class that allows user to add cars from SmartCar API and display
+ * them in a RecyclerView
+ * @since April 2021
+ * @author Group 4
+ */
 public class AddCarPage extends AppCompatActivity {
-    // Firebase instance variables
+    /**
+     * Instance of FirebaseAuth
+     */
     public static FirebaseAuth mFirebaseAuth;
+    /**
+     * Instance of GoogleSignInClient
+     */
     public static GoogleSignInClient mSignInClient;
-
+    /**
+     * Instance of FirebaseFirestore
+     */
     private FirebaseFirestore mFirestore;
-
+    /**
+     * Instance of Context
+     */
     private Context appContext;
+    /**
+     * String for Smartcar API client id
+     */
     private static String CLIENT_ID;
+    /**
+     * String for Smartcar API redirect uri
+     */
     private static String REDIRECT_URI;
+    /**
+     * String array of Smartcar API scopes
+     */
     private static String[] SCOPE;
+    /**
+     * Instance of SmartcarAuth
+     */
     private SmartcarAuth smartcarAuth;
+    /**
+     * ArrayList of vehicles
+     */
     ArrayList<Vehicle> vehicles;
+    /**
+     * Instance of RecyclerView
+     */
     RecyclerView mRecyclerView;
+    /**
+     * Instance of RecyclerView.LayoutManager
+     */
     RecyclerView.LayoutManager mLayoutManager;
+    /**
+     * Instance of RecyclerView.Adapter
+     */
     RecyclerView.Adapter mAdapter;
+    /**
+     * Instance of ImageView
+     */
     private ImageView imageView;
 
+    /**
+     * Override method of onCreate
+     * @param savedInstanceState Bundle type
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,7 +122,18 @@ public class AddCarPage extends AppCompatActivity {
         int color = Color.parseColor("#259504");
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(color));
 
+        init();
+        initSmartCarObject();
 
+        Button connectButton = findViewById(R.id.add_car_btn);
+
+        smartcarAuth.addClickHandler(appContext, connectButton);
+    }
+
+    /**
+     * Method to initialize variables
+     */
+    private void init() {
         // Initialize Firebase Auth and check if the user is signed in
         mFirebaseAuth = FirebaseAuth.getInstance();
         if (mFirebaseAuth.getCurrentUser() == null) {
@@ -117,7 +173,12 @@ public class AddCarPage extends AppCompatActivity {
             mRecyclerView.setVisibility(View.VISIBLE);
             imageView.setVisibility(View.GONE);
         }
+    }
 
+    /**
+     * Method to initiate instance of Smartcar object
+     */
+    private void initSmartCarObject() {
         // Initialize smartcar object
         appContext = getApplicationContext();
         CLIENT_ID = getString(R.string.client_id);
@@ -240,12 +301,13 @@ public class AddCarPage extends AppCompatActivity {
 
                 }
         );
-
-        Button connectButton = findViewById(R.id.add_car_btn);
-
-        smartcarAuth.addClickHandler(appContext, connectButton);
     }
 
+    /**
+     * Override method needed for custom Toolbar
+     * @param menu Menu type
+     * @return boolean
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -253,6 +315,11 @@ public class AddCarPage extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Override method needed for custom Toolbar
+     * @param item MenuItem type
+     * @return boolean
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -264,6 +331,9 @@ public class AddCarPage extends AppCompatActivity {
         }
     }
 
+    /**
+     * Method to run when clicking sign out
+     */
     private void signOut() {
         mFirebaseAuth.signOut();
         mSignInClient.signOut();

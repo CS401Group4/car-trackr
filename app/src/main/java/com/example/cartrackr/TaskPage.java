@@ -27,32 +27,69 @@ import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
+/**
+ * TaskPage class to add tasks related to a single vehicle
+ * @since April 2021
+ * @author Group 4
+ */
 public class TaskPage extends AppCompatActivity {
+    /**
+     * FirebaseFirestore instance
+     */
     private FirebaseFirestore mFirestore;
+    /**
+     * Query instance
+     */
     Query query;
-
+    /**
+     * Input for service name
+     */
     private EditText textServiceName;
+    /**
+     * Input for service date
+     */
     private EditText textServiceDate;
+    /**
+     * Save button
+     */
     private Button saveTaskButton;
+    /**
+     * FirestoreRecyclerAdapter instance
+     */
     private FirestoreRecyclerAdapter<Tasks, TasksHolder> adapter;
-
+    /**
+     * Vehicle instance
+     */
     Vehicle vehicle;
+    /**
+     * RecyclerView instance
+     */
     RecyclerView tasksList;
+    /**
+     * LinearLayoutManager instance
+     */
     LinearLayoutManager linearLayoutManager;
-
+    /**
+     * String value for service name
+     */
     String serviceName;
+    /**
+     * String value for service date
+     */
     String serviceDate;
 
+    /**
+     * Override method for onCreate
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,10 +113,15 @@ public class TaskPage extends AppCompatActivity {
                 serviceDate = textServiceDate.getText().toString();
 
                 saveDateToFirestore();
+                finish();
+                startActivity(getIntent());
             }
         });
     }
 
+    /**
+     * Method to init variables
+     */
     private void init() {
         tasksList = findViewById(R.id.task_list);
         linearLayoutManager = new LinearLayoutManager(this);
@@ -97,6 +139,9 @@ public class TaskPage extends AppCompatActivity {
         vehicle = (Vehicle) getIntent().getExtras().getSerializable("DATA");
     }
 
+    /**
+     * Method to set up toolbar
+     */
     private void setupToolbar() {
         // Setup toolbar
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -105,9 +150,12 @@ public class TaskPage extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(color));
     }
 
+    /**
+     * Method to get tasks list from Firestore
+     */
     private void getTasksList() {
         String userId = FirebaseUtil.getAuth().getCurrentUser().getUid();
-        query = mFirestore.collection("users").document(userId).collection("vehicles").document(vehicle.getId()).collection("tasks").orderBy("serviceName");
+        query = mFirestore.collection("users").document(userId).collection("vehicles").document(vehicle.getId()).collection("tasks");
         Log.i("QUERY", query.toString());
         FirestoreRecyclerOptions<Tasks> tasks = new FirestoreRecyclerOptions.Builder<Tasks>()
                 .setQuery(query, Tasks.class).build();
@@ -130,6 +178,9 @@ public class TaskPage extends AppCompatActivity {
         tasksList.setAdapter(adapter);
     }
 
+    /**
+     * TasksHolder for RecyclerView
+     */
     public class TasksHolder extends RecyclerView.ViewHolder {
         TextView taskName;
         public TasksHolder(@NonNull View itemView) {
@@ -138,18 +189,27 @@ public class TaskPage extends AppCompatActivity {
         }
     }
 
+    /**
+     * Method to start listening for adapter
+     */
     @Override
     public void onStart() {
         super.onStart();
         adapter.startListening();
     }
 
+    /**
+     * Method to stop listening for adapter
+     */
     @Override
     public void onStop() {
         super.onStop();
         adapter.stopListening();
     }
 
+    /**
+     * Method to save data to Firestore
+     */
     private void saveDateToFirestore() {
         Map<String, Object> task = new HashMap<>();
         task.put("serviceName", serviceName);
@@ -180,9 +240,13 @@ public class TaskPage extends AppCompatActivity {
 
         textServiceDate.setText("");
         textServiceName.setText("");
-        adapter.notifyDataSetChanged();
     }
 
+    /**
+     * Method needed for custom Toolbar
+     * @param menu Menu instance
+     * @return bool
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -190,6 +254,11 @@ public class TaskPage extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Method needed for custom Toolbar
+     * @param item MenuItem instance
+     * @return bool
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -201,6 +270,9 @@ public class TaskPage extends AppCompatActivity {
         }
     }
 
+    /**
+     * Method to run when clicking sign out
+     */
     private void signOut() {
         AddCarPage.mFirebaseAuth.signOut();
         AddCarPage.mSignInClient.signOut();

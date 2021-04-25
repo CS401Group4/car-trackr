@@ -45,26 +45,73 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+/**
+ * CarDetailPage class that shows single car data
+ * @since April 2021
+ * @author Group 4
+ */
 public class CarDetailPage extends AppCompatActivity implements OnMapReadyCallback {
+    /**
+     * int of car's odometer reading
+     */
     private int odometer = 0;
+    /**
+     * int of car's battery range
+     */
     private int batteryRange = 0;
+    /**
+     * double of car's remaining battery level
+     */
     private double batteryRemaining = 0;
+    /**
+     * double of car's latitude location
+     */
     private double latitude = 0;
+    /**
+     * double of car's longitude location
+     */
     private double longitude = 0;
-
+    /**
+     * Instance of FirebaseFirestore
+     */
     private FirebaseFirestore mFirestore;
-
+    /**
+     * Instance of Vehicle class
+     */
     Vehicle vehicle;
-
+    /**
+     * ProgressBar to show remaining battery
+     */
     ProgressBar progressBar;
+    /**
+     * TextView to show remaining battery percentage
+     */
     TextView batteryPercentage;
+    /**
+     * TextView to show range left (in miles)
+     */
     TextView rangeLeft;
+    /**
+     * TextView to show odometer reading
+     */
     TextView milesDriven;
+    /**
+     * Instance of LatLng showing car location
+     */
     LatLng position;
+    /**
+     * Instance of GoogleMap
+     */
     GoogleMap mMap;
-
+    /**
+     * Instance of MapView
+     */
     private MapView mapView;
 
+    /**
+     * Override method of onCreate
+     * @param savedInstanceState Bundle instance
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -147,7 +194,7 @@ public class CarDetailPage extends AppCompatActivity implements OnMapReadyCallba
                     @Override
                     public void run() {
                         try {
-                            updateProgressBar();
+                            updateCarData();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -157,6 +204,9 @@ public class CarDetailPage extends AppCompatActivity implements OnMapReadyCallba
         }).start();
     }
 
+    /**
+     * Method to save data to FireStore
+     */
     private void saveDataToFireStore() {
         Map<String, Object> vehicleData = new HashMap<>();
         vehicleData.put("odometer", odometer);
@@ -186,7 +236,11 @@ public class CarDetailPage extends AppCompatActivity implements OnMapReadyCallba
                 });
     }
 
-    private void updateProgressBar() throws IOException {
+    /**
+     * Method to update car's data
+     * @throws IOException
+     */
+    private void updateCarData() throws IOException {
         batteryRemaining = Math.rint(batteryRemaining * 100);
         progressBar.setProgress((int) batteryRemaining);
         batteryPercentage.setText(String.valueOf((int) batteryRemaining) + "%");
@@ -201,6 +255,10 @@ public class CarDetailPage extends AppCompatActivity implements OnMapReadyCallba
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(position, 10));
     }
 
+    /**
+     * Method to go to TaskPage Activity when Schedule Task button is clicked
+     * @param view View instance
+     */
     public void launchTaskPage(View view) {
         Intent intent = new Intent(this, TaskPage.class);
         Bundle bundle = new Bundle();
@@ -209,6 +267,11 @@ public class CarDetailPage extends AppCompatActivity implements OnMapReadyCallba
         startActivity(intent);
     }
 
+    /**
+     * Override method needed for custom Toolbar
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -216,6 +279,11 @@ public class CarDetailPage extends AppCompatActivity implements OnMapReadyCallba
         return true;
     }
 
+    /**
+     * Override method needed for custom Toolbar
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -227,6 +295,9 @@ public class CarDetailPage extends AppCompatActivity implements OnMapReadyCallba
         }
     }
 
+    /**
+     * Method to run when clicking Sign Out
+     */
     private void signOut() {
         AddCarPage.mFirebaseAuth.signOut();
         AddCarPage.mSignInClient.signOut();
@@ -237,53 +308,79 @@ public class CarDetailPage extends AppCompatActivity implements OnMapReadyCallba
     /**
      * Methods to display Map
      */
-
     private void initGoogleMaps(Bundle savedInstanceState) {
         mapView.getMapAsync(this);
         mapView.onCreate(savedInstanceState);
     }
 
+    /**
+     * Override method needed for displaying map
+     * @param map GoogleMap instance
+     */
     @Override
     public void onMapReady(GoogleMap map) {
         mMap = map;
     }
 
+    /**
+     * Override method needed for displaying map
+     */
     @Override
     protected void onStart() {
         super.onStart();
         mapView.onStart();
     }
 
+    /**
+     * Override method needed for displaying map
+     */
     @Override
     protected void onResume() {
         super.onResume();
         mapView.onResume();
     }
 
+    /**
+     * Override method needed for displaying map
+     */
     @Override
     protected void onPause() {
         super.onPause();
         mapView.onPause();
     }
 
+    /**
+     * Override method needed for displaying map
+     */
     @Override
     protected void onStop() {
         super.onStop();
         mapView.onStop();
     }
 
+    /**
+     * Override method needed for displaying map
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();
         mapView.onDestroy();
     }
 
+    /**
+     * Override method needed for displaying map
+     * @param outState Bundle instance
+     * @param outPersistentState PersistableBundle instance
+     */
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) {
         super.onSaveInstanceState(outState, outPersistentState);
         mapView.onSaveInstanceState(outState);
     }
 
+    /**
+     * Override method needed for displaying map
+     */
     @Override
     public void onLowMemory() {
         super.onLowMemory();
