@@ -32,98 +32,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="310564c0-4e3a-4e12-ae56-65977446b5af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/UMLDiagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/allclasses-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/allclasses-noframe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/AddCarPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/CarDetailPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/ExampleInstrumentedTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/ExampleUnitTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/MainActivity.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/RegistrationPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/SignInActivity.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/TaskPage.TasksHolder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/TaskPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/adapter/MainAdapter.ViewHolder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/adapter/MainAdapter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/adapter/class-use/MainAdapter.ViewHolder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/adapter/class-use/MainAdapter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/adapter/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/adapter/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/adapter/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/adapter/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/AddCarPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/CarDetailPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/ExampleInstrumentedTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/ExampleUnitTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/MainActivity.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/RegistrationPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/SignInActivity.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/TaskPage.TasksHolder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/TaskPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/Tasks.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/TasksTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/Vehicle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/VehicleTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/class-use/Tasks.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/class-use/TasksTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/class-use/Vehicle.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/class-use/VehicleTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/util/FirebaseUtil.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/util/class-use/FirebaseUtil.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/util/package-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/util/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/util/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/util/package-use.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/constant-values.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/deprecated-list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/help-doc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-11.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-12.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-13.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-14.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-15.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-16.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-17.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-18.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index-files/index-9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/overview-frame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/overview-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/package-list" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/serialized-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firestore.rules" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/CarTrackr.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/CarTrackr.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/cartrackr/model/TasksTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/example/cartrackr/model/TasksTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/cartrackr/model/VehicleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/example/cartrackr/model/VehicleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/cartrackr/util/FirebaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cartrackr/util/FirebaseUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebase.json" beforeDir="false" afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +149,7 @@
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
   </component>
-  <component name="RunManager" selected="Android Instrumented Tests.VehicleTest">
+  <component name="RunManager" selected="Android App.app">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -528,33 +449,33 @@
       <screen x="0" y="25" width="1440" height="817" />
     </state>
     <state x="412" y="168" width="656" height="482" key="Downloadable.Font.Dialog.Size/0.25.1440.817@0.25.1440.817" timestamp="1616872621136" />
-    <state width="1798" height="287" key="GridCell.Tab.0.bottom" timestamp="1619397420384">
-      <screen x="1440" y="25" width="1920" height="1055" />
+    <state width="1396" height="224" key="GridCell.Tab.0.bottom" timestamp="1619415200182">
+      <screen x="0" y="25" width="1440" height="817" />
     </state>
     <state width="1396" height="225" key="GridCell.Tab.0.bottom/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1619395418991" />
-    <state width="1798" height="287" key="GridCell.Tab.0.bottom/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619397420384" />
-    <state width="1396" height="204" key="GridCell.Tab.0.bottom/0.25.1440.817@0.25.1440.817" timestamp="1619392027676" />
+    <state width="1798" height="287" key="GridCell.Tab.0.bottom/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619398408692" />
+    <state width="1396" height="224" key="GridCell.Tab.0.bottom/0.25.1440.817@0.25.1440.817" timestamp="1619415200182" />
     <state width="1396" height="207" key="GridCell.Tab.0.bottom/0.25.1440.818@0.25.1440.818" timestamp="1618880549142" />
-    <state width="1798" height="287" key="GridCell.Tab.0.center" timestamp="1619397420383">
-      <screen x="1440" y="25" width="1920" height="1055" />
+    <state width="1396" height="224" key="GridCell.Tab.0.center" timestamp="1619415200182">
+      <screen x="0" y="25" width="1440" height="817" />
     </state>
     <state width="1396" height="225" key="GridCell.Tab.0.center/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1619395418989" />
-    <state width="1798" height="287" key="GridCell.Tab.0.center/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619397420383" />
-    <state width="1396" height="204" key="GridCell.Tab.0.center/0.25.1440.817@0.25.1440.817" timestamp="1619392027675" />
+    <state width="1798" height="287" key="GridCell.Tab.0.center/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619398408691" />
+    <state width="1396" height="224" key="GridCell.Tab.0.center/0.25.1440.817@0.25.1440.817" timestamp="1619415200182" />
     <state width="1396" height="207" key="GridCell.Tab.0.center/0.25.1440.818@0.25.1440.818" timestamp="1618880549141" />
-    <state width="1798" height="287" key="GridCell.Tab.0.left" timestamp="1619397420382">
-      <screen x="1440" y="25" width="1920" height="1055" />
+    <state width="1396" height="224" key="GridCell.Tab.0.left" timestamp="1619415200181">
+      <screen x="0" y="25" width="1440" height="817" />
     </state>
     <state width="1396" height="225" key="GridCell.Tab.0.left/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1619395418988" />
-    <state width="1798" height="287" key="GridCell.Tab.0.left/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619397420382" />
-    <state width="1396" height="204" key="GridCell.Tab.0.left/0.25.1440.817@0.25.1440.817" timestamp="1619392027674" />
+    <state width="1798" height="287" key="GridCell.Tab.0.left/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619398408690" />
+    <state width="1396" height="224" key="GridCell.Tab.0.left/0.25.1440.817@0.25.1440.817" timestamp="1619415200181" />
     <state width="1396" height="207" key="GridCell.Tab.0.left/0.25.1440.818@0.25.1440.818" timestamp="1618880549140" />
-    <state width="1798" height="287" key="GridCell.Tab.0.right" timestamp="1619397420383">
-      <screen x="1440" y="25" width="1920" height="1055" />
+    <state width="1396" height="224" key="GridCell.Tab.0.right" timestamp="1619415200182">
+      <screen x="0" y="25" width="1440" height="817" />
     </state>
     <state width="1396" height="225" key="GridCell.Tab.0.right/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1619395418990" />
-    <state width="1798" height="287" key="GridCell.Tab.0.right/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619397420383" />
-    <state width="1396" height="204" key="GridCell.Tab.0.right/0.25.1440.817@0.25.1440.817" timestamp="1619392027675" />
+    <state width="1798" height="287" key="GridCell.Tab.0.right/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619398408691" />
+    <state width="1396" height="224" key="GridCell.Tab.0.right/0.25.1440.817@0.25.1440.817" timestamp="1619415200182" />
     <state width="1396" height="207" key="GridCell.Tab.0.right/0.25.1440.818@0.25.1440.818" timestamp="1618880549141" />
     <state x="292" y="174" key="IDE.errors.dialog" timestamp="1618981992698">
       <screen x="0" y="25" width="1440" height="817" />
