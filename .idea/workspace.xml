@@ -9,6 +9,9 @@
     <option name="TOOL_WINDOW_CUSTOM_FILTER" value="AUTH" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -29,15 +32,98 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="310564c0-4e3a-4e12-ae56-65977446b5af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/UMLDiagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/allclasses-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/allclasses-noframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/AddCarPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/CarDetailPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/ExampleInstrumentedTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/ExampleUnitTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/MainActivity.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/RegistrationPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/SignInActivity.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/TaskPage.TasksHolder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/TaskPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/adapter/MainAdapter.ViewHolder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/adapter/MainAdapter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/adapter/class-use/MainAdapter.ViewHolder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/adapter/class-use/MainAdapter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/adapter/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/adapter/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/adapter/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/adapter/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/AddCarPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/CarDetailPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/ExampleInstrumentedTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/ExampleUnitTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/MainActivity.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/RegistrationPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/SignInActivity.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/TaskPage.TasksHolder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/class-use/TaskPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/Tasks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/TasksTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/Vehicle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/VehicleTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/class-use/Tasks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/class-use/TasksTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/class-use/Vehicle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/class-use/VehicleTest.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/model/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/util/FirebaseUtil.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/util/class-use/FirebaseUtil.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/util/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/util/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/util/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/com/example/cartrackr/util/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/deprecated-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-13.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-14.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-15.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-16.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-17.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-18.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index-files/index-9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/overview-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/overview-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/serialized-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firestore.rules" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/cartrackr/model/TasksTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/example/cartrackr/model/TasksTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/example/cartrackr/model/VehicleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/example/cartrackr/model/VehicleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/cartrackr/model/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cartrackr/model/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/cartrackr/util/FirebaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cartrackr/util/FirebaseUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebase.json" beforeDir="false" afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,16 +175,19 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-04-15T16:15:49.112Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android-custom-view/Users/tj3407/Library/Android/sdk/sources/android-30/android/widget/TextView.java_SELECTED" value="TextView" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/androidTest/java/com/example/cartrackr/model" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="multi-representation-preview/Users/tj3407/Library/Android/sdk/sources/android-30/android/widget/TextView.java_selected" value="Custom views" />
-    <property name="project.structure.last.edited" value="Suggestions" />
+    <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="PsdUISettings">
     <option name="MODULE_TAB" value="Signing Configs" />
@@ -108,16 +197,14 @@
     <key name="android.template.959655039">
       <recent name="com.example.cartrackr" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.cartrackr" />
+    </key>
     <key name="android.template.2089968194">
       <recent name="com.example.cartrackr" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="junit.framework.TestCase" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
-      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
     <key name="android.template.1585904066">
       <recent name="com.example.cartrackr" />
@@ -129,14 +216,42 @@
       <recent name="com.example.cartrackr.model" />
       <recent name="com.example.cartrackr.tests" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="android.template.679834257">
       <recent name="com.example.cartrackr" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.cartrackr" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
     </key>
   </component>
   <component name="RunManager" selected="Android Instrumented Tests.VehicleTest">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All Tests" type="AndroidJUnit" factoryName="Android JUnit">
+      <useClassPathOnly />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="directory" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <dir value="$PROJECT_DIR$/app/src/androidTest/java/com/example/cartrackr/model" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -162,7 +277,7 @@
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
+      <option name="DEBUGGER_TYPE" value="Java" />
       <Auto>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
         <option name="SHOW_STATIC_VARS" value="true" />
@@ -217,7 +332,7 @@
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
+      <option name="DEBUGGER_TYPE" value="Java" />
       <Auto>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
         <option name="SHOW_STATIC_VARS" value="true" />
@@ -268,7 +383,7 @@
       <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
+      <option name="DEBUGGER_TYPE" value="Java" />
       <Auto>
         <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
         <option name="SHOW_STATIC_VARS" value="true" />
@@ -303,6 +418,12 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Android App.app" />
+      <item itemvalue="Android Instrumented Tests.TasksTest" />
+      <item itemvalue="Android Instrumented Tests.VehicleTest" />
+      <item itemvalue="Android JUnit.All Tests" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Android Instrumented Tests.VehicleTest" />
@@ -310,6 +431,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -320,8 +442,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616692882611</updated>
+      <workItem from="1619394660841" duration="365000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -339,10 +465,23 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="265" y="145" key="#PSD" timestamp="1617464492863">
+    <state x="1966" y="140" key="#All_Tests" timestamp="1619397939003">
+      <screen x="1440" y="25" width="1920" height="1055" />
+    </state>
+    <state x="1966" y="140" key="#All_Tests/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619397939003" />
+    <state x="265" y="145" key="#PSD" timestamp="1619394609062">
       <screen x="0" y="25" width="1440" height="817" />
     </state>
+    <state x="265" y="145" key="#PSD/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1619394609062" />
     <state x="265" y="145" key="#PSD/0.25.1440.817@0.25.1440.817" timestamp="1617464492863" />
+    <state x="1866" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619397890880">
+      <screen x="1440" y="25" width="1920" height="1055" />
+    </state>
+    <state x="1866" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619397890880" />
+    <state x="585" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619396788842">
+      <screen x="0" y="25" width="1440" height="817" />
+    </state>
+    <state x="585" y="324" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1619396788842" />
     <state x="553" y="97" key="#com.intellij.ide.util.MemberChooser" timestamp="1619238900277">
       <screen x="0" y="25" width="1440" height="817" />
     </state>
@@ -358,9 +497,15 @@
       <screen x="0" y="25" width="1440" height="817" />
     </state>
     <state x="478" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.817@0.25.1440.817" timestamp="1619239001306" />
-    <state x="129" y="125" width="1200" height="567" key="AVDManager" timestamp="1618971530646">
+    <state x="378" y="136" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1619394549004">
       <screen x="0" y="25" width="1440" height="817" />
     </state>
+    <state x="378" y="136" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1619394549004" />
+    <state x="378" y="136" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1440.817@0.25.1440.817" timestamp="1619392027552" />
+    <state x="1612" y="154" width="1600" height="733" key="AVDManager" timestamp="1619397241319">
+      <screen x="1440" y="25" width="1920" height="1055" />
+    </state>
+    <state x="1612" y="154" width="1600" height="733" key="AVDManager/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619397241319" />
     <state x="129" y="125" width="1200" height="567" key="AVDManager/0.25.1440.817@0.25.1440.817" timestamp="1618971530646" />
     <state x="328" y="168" key="AndroidCreateResourceDirectoryDialog" timestamp="1618376594664">
       <screen x="0" y="25" width="1440" height="817" />
@@ -383,33 +528,33 @@
       <screen x="0" y="25" width="1440" height="817" />
     </state>
     <state x="412" y="168" width="656" height="482" key="Downloadable.Font.Dialog.Size/0.25.1440.817@0.25.1440.817" timestamp="1616872621136" />
-    <state width="1396" height="204" key="GridCell.Tab.0.bottom" timestamp="1619390948057">
-      <screen x="0" y="25" width="1440" height="817" />
+    <state width="1798" height="287" key="GridCell.Tab.0.bottom" timestamp="1619397420384">
+      <screen x="1440" y="25" width="1920" height="1055" />
     </state>
-    <state width="1235" height="202" key="GridCell.Tab.0.bottom/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1618940906195" />
-    <state width="1675" height="253" key="GridCell.Tab.0.bottom/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619154901274" />
-    <state width="1396" height="204" key="GridCell.Tab.0.bottom/0.25.1440.817@0.25.1440.817" timestamp="1619390948057" />
+    <state width="1396" height="225" key="GridCell.Tab.0.bottom/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1619395418991" />
+    <state width="1798" height="287" key="GridCell.Tab.0.bottom/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619397420384" />
+    <state width="1396" height="204" key="GridCell.Tab.0.bottom/0.25.1440.817@0.25.1440.817" timestamp="1619392027676" />
     <state width="1396" height="207" key="GridCell.Tab.0.bottom/0.25.1440.818@0.25.1440.818" timestamp="1618880549142" />
-    <state width="1396" height="204" key="GridCell.Tab.0.center" timestamp="1619390948057">
-      <screen x="0" y="25" width="1440" height="817" />
+    <state width="1798" height="287" key="GridCell.Tab.0.center" timestamp="1619397420383">
+      <screen x="1440" y="25" width="1920" height="1055" />
     </state>
-    <state width="1235" height="202" key="GridCell.Tab.0.center/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1618940906194" />
-    <state width="1675" height="253" key="GridCell.Tab.0.center/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619154901273" />
-    <state width="1396" height="204" key="GridCell.Tab.0.center/0.25.1440.817@0.25.1440.817" timestamp="1619390948057" />
+    <state width="1396" height="225" key="GridCell.Tab.0.center/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1619395418989" />
+    <state width="1798" height="287" key="GridCell.Tab.0.center/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619397420383" />
+    <state width="1396" height="204" key="GridCell.Tab.0.center/0.25.1440.817@0.25.1440.817" timestamp="1619392027675" />
     <state width="1396" height="207" key="GridCell.Tab.0.center/0.25.1440.818@0.25.1440.818" timestamp="1618880549141" />
-    <state width="1396" height="204" key="GridCell.Tab.0.left" timestamp="1619390948056">
-      <screen x="0" y="25" width="1440" height="817" />
+    <state width="1798" height="287" key="GridCell.Tab.0.left" timestamp="1619397420382">
+      <screen x="1440" y="25" width="1920" height="1055" />
     </state>
-    <state width="1235" height="202" key="GridCell.Tab.0.left/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1618940906194" />
-    <state width="1675" height="253" key="GridCell.Tab.0.left/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619154901272" />
-    <state width="1396" height="204" key="GridCell.Tab.0.left/0.25.1440.817@0.25.1440.817" timestamp="1619390948056" />
+    <state width="1396" height="225" key="GridCell.Tab.0.left/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1619395418988" />
+    <state width="1798" height="287" key="GridCell.Tab.0.left/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619397420382" />
+    <state width="1396" height="204" key="GridCell.Tab.0.left/0.25.1440.817@0.25.1440.817" timestamp="1619392027674" />
     <state width="1396" height="207" key="GridCell.Tab.0.left/0.25.1440.818@0.25.1440.818" timestamp="1618880549140" />
-    <state width="1396" height="204" key="GridCell.Tab.0.right" timestamp="1619390948057">
-      <screen x="0" y="25" width="1440" height="817" />
+    <state width="1798" height="287" key="GridCell.Tab.0.right" timestamp="1619397420383">
+      <screen x="1440" y="25" width="1920" height="1055" />
     </state>
-    <state width="1235" height="202" key="GridCell.Tab.0.right/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1618940906195" />
-    <state width="1675" height="253" key="GridCell.Tab.0.right/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619154901273" />
-    <state width="1396" height="204" key="GridCell.Tab.0.right/0.25.1440.817@0.25.1440.817" timestamp="1619390948057" />
+    <state width="1396" height="225" key="GridCell.Tab.0.right/0.25.1440.817/1440.25.1920.1055@0.25.1440.817" timestamp="1619395418990" />
+    <state width="1798" height="287" key="GridCell.Tab.0.right/0.25.1440.817/1440.25.1920.1055@1440.25.1920.1055" timestamp="1619397420383" />
+    <state width="1396" height="204" key="GridCell.Tab.0.right/0.25.1440.817@0.25.1440.817" timestamp="1619392027675" />
     <state width="1396" height="207" key="GridCell.Tab.0.right/0.25.1440.818@0.25.1440.818" timestamp="1618880549141" />
     <state x="292" y="174" key="IDE.errors.dialog" timestamp="1618981992698">
       <screen x="0" y="25" width="1440" height="817" />
@@ -419,10 +564,10 @@
       <screen x="0" y="25" width="1440" height="815" />
     </state>
     <state x="376" y="175" key="MultipleFileMergeDialog/0.25.1440.815@0.25.1440.815" timestamp="1616693474395" />
-    <state x="337" y="25" key="SettingsEditor" timestamp="1617464796258">
+    <state x="337" y="25" key="SettingsEditor" timestamp="1619391555684">
       <screen x="0" y="25" width="1440" height="817" />
     </state>
-    <state x="337" y="25" key="SettingsEditor/0.25.1440.817@0.25.1440.817" timestamp="1617464796258" />
+    <state x="337" y="25" key="SettingsEditor/0.25.1440.817@0.25.1440.817" timestamp="1619391555684" />
     <state x="500" y="215" key="chooseDestDirectoryDialog" timestamp="1619279949985">
       <screen x="0" y="25" width="1440" height="817" />
     </state>
