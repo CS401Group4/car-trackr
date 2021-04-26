@@ -13,7 +13,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
  */
 public class FirebaseUtil {
     /** Use emulators only in debug builds **/
-    private static final boolean sUseEmulators = BuildConfig.DEBUG;
+    private static final boolean sUseEmulators = false;
 
     /**
      * Instance of FirebaseFirestore
